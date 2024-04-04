@@ -1,0 +1,27 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "imageUrl": "/pam.jpg",
+      "title": "پنل مشتریان الومحتوا",
+      "description": "وبسایت پنل مشتریان الومحتوا که بک اند سایت همانطور که وردپرس بود، وردپرس باقی ماند و api های مورد نیاز برای بخش فرانت اند Nextjs طراحی و پیاده سازی شد و همچنین بک اند برای سایت الوترجمه هم مورد استفاده قرار گرفته است.",
+      "skills": [
+        "پی اچ پی (PHP)",
+        "وردپرس (WordPress)",
+        "نکست (NextJs)",
+        "ریکت کویری (ReactQuery)"
+      ],
+      "onlineUrl": "https://portal.alomohtava.com/",
+      "sourceUrl": ""
+    },
+    {
+      "id": 1,
+      "imageUrl": "/voi.jpg",
+      "title": "وب سایت VisitOurIran",
+      "description": "پیاده سازی فرانت اند سایت VisitOurIran با فریمورک NextJs و کتابخانه ReactJs. بک اند اختصاصی با NestJs و معماری مایکروسرویس و سرور های اختصاصی.",
+      "skills": ["ری اکت (React)", "Material Design"],
+      "onlineUrl": "https://www.visitouriran.com/",
+      "sourceUrl": ""
+    }
+  ]
+}

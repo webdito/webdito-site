@@ -1,4 +1,5 @@
 import { ProjectCard } from "./ProjectCard";
+import dataJson from "@/data/projects.json";
 
 export const Projects = () => {
   return (
@@ -12,11 +13,14 @@ export const Projects = () => {
         </p>
       </div>
       <div className="flex gap-8 flex-wrap">
-        {[1, 2, 3, 4, 5, 6, 7, 8].map(({ item }) => (
-          <div className="w-full md:w-[47%] lg:w-[31%]" key={item}>
-            <ProjectCard />
-          </div>
-        ))}
+        {!!dataJson &&
+          dataJson?.projects &&
+          dataJson.projects.length > 0 &&
+          dataJson.projects.map((item) => (
+            <div className="w-full md:w-[47%] xl:w-[31%]" key={item.id}>
+              <ProjectCard {...item} />
+            </div>
+          ))}
       </div>
     </section>
   );
