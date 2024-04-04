@@ -3,10 +3,10 @@ import dataJson from "@/data/projects.json";
 
 export const Projects = () => {
   return (
-    <section className="flex flex-col items-center py-6 gap-10">
+    <section id="Experience" className="flex flex-col items-center py-6 gap-10">
       <div className="flex flex-col items-center gap-3">
         <h2 className="text-2xl md:text-3xl lg:text-4xl text-slate-600">
-          پروژه ها
+          تجربه های وبدیتو
         </h2>
         <p className="text-content-gray text-base md:text-lg lg:text-xl">
           چیزهایی که تا الان خلق کرده ایم

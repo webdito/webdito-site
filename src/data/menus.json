@@ -1,0 +1,26 @@
+{
+  "header": [
+    {
+      "id": 1,
+      "nameMenu": "صفه اصلی",
+      "urlMenu": "/"
+    },
+    {
+      "id": 2,
+      "nameMenu": "تجارب",
+      "urlMenu": "#Experience"
+    }
+  ],
+  "footer": [
+    {
+      "id": 1,
+      "nameMenu": "صفه اصلی",
+      "urlMenu": "/"
+    },
+    {
+      "id": 2,
+      "nameMenu": "تجارب",
+      "urlMenu": "#Experience"
+    }
+  ]
+}

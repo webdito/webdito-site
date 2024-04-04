@@ -1,23 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-
-const menus = [
-  {
-    id: 1,
-    nameMenu: "صفه اصلی",
-    urlMenu: "/",
-  },
-  {
-    id: 2,
-    nameMenu: "تجارب",
-    urlMenu: "#Experience",
-  },
-  {
-    id: 3,
-    nameMenu: "مهارت",
-    urlMenu: "#Skills",
-  },
-];
+import dataJson from "@/data/menus.json";
 
 export const Header = () => {
   return (
@@ -32,20 +15,22 @@ export const Header = () => {
           />
         </Link>
       </div>
-      <nav className="hidden md:block">
-        <ul className="flex items-center gap-6">
-          {menus.map(({ id, nameMenu, urlMenu }) => (
-            <li key={id}>
-              <Link
-                href={urlMenu}
-                className="text-content-gray hover:text-black"
-              >
-                {nameMenu}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
+      {!!dataJson && !!dataJson?.header && (
+        <nav className="hidden md:flex flex-1">
+          <ul className="flex items-center gap-6">
+            {dataJson?.header.map(({ id, nameMenu, urlMenu }) => (
+              <li key={id}>
+                <Link
+                  href={urlMenu}
+                  className="text-content-gray hover:text-black"
+                >
+                  {nameMenu}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )}
       <div className="flex items-center gap-3">
         <Link href="https://github.com/webdito" className="group">
           <svg

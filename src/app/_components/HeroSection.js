@@ -3,7 +3,7 @@ import Image from "next/image";
 export const HeroSection = () => {
   return (
     <section className="flex flex-col md:flex-row items-center justify-between gap-20 lg:gap-3 py-10 lg:py-36">
-      <h1 className="flex flex-col text-content-gray text-base md:text-lg lg:text-2xl xl:text-3xl gap-3 lg:gap-6 text-justify">
+      <h1 className="flex flex-col text-content-gray text-base md:text-lg lg:text-2xl gap-3 lg:gap-6 text-justify">
         <span>سلام :)</span>
         <span>
           اینجا
@@ -17,8 +17,8 @@ export const HeroSection = () => {
       </h1>
       <div className="bg-gradient-to-r from-pink-500 to-yellow-500 p-2 rounded-full">
         <Image
-          width={100}
-          height={100}
+          width={500}
+          height={500}
           src="/profile-logo.png"
           alt="WebDito Logo for HeroSection"
           className="size-44 md:size-60 lg:size-80 rounded-full"

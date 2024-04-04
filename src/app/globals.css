@@ -9,3 +9,8 @@
 hr {
   @apply bg-gradient-to-l from-gray-50 to-gray-600 h-0.5;
 }
+
+html {
+  scroll-padding-top: 50px ;
+  scroll-behavior: smooth;
+}

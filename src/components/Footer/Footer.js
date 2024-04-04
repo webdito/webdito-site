@@ -1,23 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-
-const menus = [
-  {
-    id: 1,
-    nameMenu: "صفه اصلی",
-    urlMenu: "/",
-  },
-  {
-    id: 2,
-    nameMenu: "تجارب",
-    urlMenu: "#Experience",
-  },
-  {
-    id: 3,
-    nameMenu: "مهارت",
-    urlMenu: "#Skills",
-  },
-];
+import dataJson from "@/data/menus.json";
 
 export const Footer = () => {
   return (
@@ -69,26 +52,31 @@ export const Footer = () => {
       </div>
       <hr />
       <div className="flex flex-col md:flex-row items-center justify-between gap-6 py-10">
-        <nav>
-          <ul className="flex flex-col lg:flex-row items-center gap-6">
-            {menus.map(({ id, nameMenu, urlMenu }) => (
-              <li key={id}>
-                <Link
-                  href={urlMenu}
-                  className="text-content-gray hover:text-black"
-                >
-                  {nameMenu}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        {!!dataJson && !!dataJson?.footer && (
+          <nav>
+            <ul className="flex flex-col lg:flex-row items-center gap-6">
+              {dataJson?.footer?.map(({ id, nameMenu, urlMenu }) => (
+                <li key={id}>
+                  <Link
+                    href={urlMenu}
+                    className="text-content-gray hover:text-black"
+                  >
+                    {nameMenu}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        )}
         <div className="mt-1">
           <span className="text-content-gray hover:text-black text-md text-center">
             <span>طراحی شده توسط تیم</span>
-            <span className="font-bold px-2 bg-gradient-to-r from-pink-500 to-yellow-500 bg-clip-text text-transparent">
+            <Link
+              href="https://webdito.site"
+              className="font-bold px-2 bg-gradient-to-r from-pink-500 to-yellow-500 bg-clip-text text-transparent"
+            >
               وبدیتو
-            </span>
+            </Link>
             <span>حقوق کپی رایت کامل محفوض است.</span>
           </span>
         </div>
