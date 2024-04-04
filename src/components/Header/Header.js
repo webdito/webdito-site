@@ -22,7 +22,7 @@ const menus = [
 export const Header = () => {
   return (
     <header className="flex items-center justify-between gap-6 py-10">
-      <div>
+      <div className="flex-1 md:flex-none">
         <Link href="/">
           <Image
             width={150}
@@ -32,7 +32,7 @@ export const Header = () => {
           />
         </Link>
       </div>
-      <div className="hidden md:block">
+      <nav className="hidden md:block">
         <ul className="flex items-center gap-6">
           {menus.map(({ id, nameMenu, urlMenu }) => (
             <li key={id}>
@@ -45,7 +45,7 @@ export const Header = () => {
             </li>
           ))}
         </ul>
-      </div>
+      </nav>
       <div className="flex items-center gap-3">
         <Link href="https://github.com/webdito" className="group">
           <svg
@@ -63,6 +63,24 @@ export const Header = () => {
             />
           </svg>
         </Link>
+      </div>
+      <div className="md:hidden">
+        <button className="appearance-none size-10 p-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="size-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M3.75 9h16.5m-16.5 6.75h16.5"
+            />
+          </svg>
+        </button>
       </div>
     </header>
   );

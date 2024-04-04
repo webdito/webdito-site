@@ -3,5 +3,9 @@
 @tailwind utilities;
 
 * {
-    transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+hr {
+  @apply bg-gradient-to-l from-gray-50 to-gray-600 h-0.5;
 }
